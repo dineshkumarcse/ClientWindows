@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             connection.StartAsync();
-            connection.InvokeCoreAsync("Get", args: new[] { "Dinesh" });
+            connection.InvokeCoreAsync("Get", args: new[] { "Request : " });
             connection.On("Get", (string username) =>
             {
                 lblResoponse.Text = username;
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         private void btnStart_Click(object sender, EventArgs e)
         {
             connection.StartAsync();
-            connection.InvokeCoreAsync("Start", args: new[] { "Dinesh" });
+            connection.InvokeCoreAsync("Start", args: new[] { "Request : " });
             connection.On("Start", (string username) =>
             {
                 lblResoponse.Text = username;
@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         private void btnStop_Click(object sender, EventArgs e)
         {
             connection.StartAsync();
-            connection.InvokeCoreAsync("Stop", args: new[] { "Dinesh" });
+            connection.InvokeCoreAsync("Stop", args: new[] { "Request : " });
             connection.On("Stop", (string username) =>
             {
                 lblResoponse.Text = username;
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
         private void btnRefesh_Click(object sender, EventArgs e)
         {
             connection.StartAsync();
-            connection.InvokeCoreAsync("Get", args: new[] { "Dinesh" });
+            connection.InvokeCoreAsync("Get", args: new[] { "Request : " });
             connection.On("Get", (string username) =>
             {
                 lblResoponse.Text = username;
